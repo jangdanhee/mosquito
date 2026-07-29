@@ -1,0 +1,1710 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>빛고을 광주 | 문화와 미래의 도시</title>
+    <meta
+      name="description"
+      content="민주주의의 역사와 첨단 문화 예술이 공존하는 아름다운 도시, 광주광역시. 무등산, 국립아시아문화전당(ACC), 양림동 역사문화마을, 광주 8미 등 빛고을의 명소와 미식, 추천 여행 코스, 방명록을 만나보세요."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="빛고을 광주 | 문화와 미래의 도시" />
+    <meta
+      property="og:description"
+      content="무등산, ACC, 양림동, 광주 8미까지 — 빛고을 광주의 명소·미식·추천 코스를 만나보세요."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <style>
+      :root {
+        /* 축제 분위기를 극대화한 네온 & 페스티벌 컬러 테마 */
+        --primary: #0284c7;
+        --primary-dark: #0369a1;
+        --secondary: #0b132b; /* 깊고 오묘한 페스티벌 나이트 블루 */
+        --accent: #ffb703; /* 빛나는 앰버 옐로우 */
+        --accent-pink: #ff007f; /* 축제 포인트 핫핑크 */
+        --accent-purple: #7209b7; /* 축제 네온 퍼플 */
+        --accent-green: #10b981;
+        --badge-dday: #ef4444;
+        --bg-light: #f4f7fb;
+        --surface: #ffffff;
+        --text-main: #0f172a;
+        --text-sub: #64748b;
+        --border: #e2e8f0;
+        --radius-lg: 20px;
+        --radius-md: 14px;
+        --shadow: 0 12px 32px -8px rgba(114, 9, 183, 0.12);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Pretendard", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--bg-light);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* 1. 글로벌 네비게이션 바 (GNB) */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(11, 19, 43, 0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        transition: all 0.3s;
+      }
+
+      .nav-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 2;
+        letter-spacing: -0.5px;
+      }
+
+      .logo i {
+        filter: drop-shadow(0 0 8px var(--accent));
+      }
+
+      .logo span {
+        color: var(--accent);
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .nav-link {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #cbd5e1;
+        transition: all 0.2s;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: var(--accent);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 100%;
+        height: 2px;
+        background: var(--accent);
+        transition: transform 0.2s ease;
+      }
+
+      .nav-link:hover::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+
+      .nav-btn {
+        background: linear-gradient(
+          135deg,
+          var(--accent-pink) 0%,
+          var(--accent-purple) 100%
+        );
+        color: white;
+        padding: 0.65rem 1.4rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+        box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+      }
+
+      .nav-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+      }
+
+      /* 2. 메인 히어로 섹션 */
+      .hero {
+        padding-top: 140px;
+        padding-bottom: 90px;
+        background: radial-gradient(circle at 10% 20%, #1c2541 0%, #0b132b 90%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* 축제 오로라 및 컨페티 빛 효과 */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 0, 127, 0.25) 0%,
+          rgba(114, 9, 183, 0.2) 40%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        border-radius: 50%;
+        animation: pulse 6s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: -5%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 183, 3, 0.2) 0%,
+          rgba(2, 132, 199, 0.15) 50%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        border-radius: 50%;
+        animation: pulse 8s ease-in-out infinite alternate-reverse;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1) translate(0, 0);
+        }
+        100% {
+          transform: scale(1.1) translate(-20px, 20px);
+        }
+      }
+
+      .hero-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-text h1 {
+        font-size: 3.4rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: 1.2rem;
+        letter-spacing: -1px;
+      }
+
+      .hero-text p {
+        font-size: 1.15rem;
+        color: #cbd5e1;
+        margin-bottom: 2.2rem;
+        word-break: keep-all;
+      }
+
+      .hero-search {
+        display: flex;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 6px;
+        border-radius: 50px;
+        box-shadow:
+          0 12px 30px rgba(0, 0, 0, 0.3),
+          0 0 0 2px rgba(255, 183, 3, 0.3);
+        max-width: 500px;
+        transition: transform 0.2s;
+      }
+
+      .hero-search:focus-within {
+        transform: scale(1.02);
+        box-shadow:
+          0 16px 35px rgba(0, 0, 0, 0.4),
+          0 0 0 3px var(--accent);
+      }
+
+      .hero-search input {
+        border: none;
+        outline: none;
+        padding: 0.8rem 1.5rem;
+        flex: 1;
+        font-size: 0.95rem;
+        border-radius: 50px;
+        background: transparent;
+      }
+
+      .hero-search button {
+        background: linear-gradient(135deg, var(--accent) 0%, #f59e0b 100%);
+        color: #0b132b;
+        border: none;
+        padding: 0.8rem 1.8rem;
+        border-radius: 50px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.2s;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+      }
+
+      .hero-search button:hover {
+        transform: scale(1.03);
+        background: #f59e0b;
+      }
+
+      /* 3. 데이터 요약 스트립 */
+      .stats-bar {
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      }
+
+      .stats-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1.8rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+      }
+
+      .stat-item h3 {
+        font-size: 1.8rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--accent-purple) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+      }
+
+      .stat-item p {
+        font-size: 0.9rem;
+        color: var(--text-sub);
+        font-weight: 600;
+        margin-top: 2px;
+      }
+
+      /* 공통 레이아웃 */
+      .section {
+        padding: 6rem 2rem;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 4rem;
+      }
+
+      .section-tag {
+        color: var(--accent-pink);
+        font-weight: 800;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 0.6rem;
+        display: inline-block;
+        background: rgba(255, 0, 127, 0.08);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+      }
+
+      .section-title {
+        font-size: 2.3rem;
+        font-weight: 800;
+        color: var(--secondary);
+        letter-spacing: -0.5px;
+      }
+
+      /* 4. 카드 4개 스타일 설정 */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+
+      .card {
+        background: #ffffff;
+        border-radius: var(--radius-lg);
+        overflow: visible;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 183, 3, 0.8);
+        box-shadow: 0 20px 35px -5px rgba(255, 183, 3, 0.25);
+      }
+
+      /* 🔥 특별 카드 스타일 (어긋나게 배치) */
+      .card.card-offset {
+        transform: translateY(-16px);
+        border-color: rgba(114, 9, 183, 0.3);
+        box-shadow: 0 15px 35px rgba(114, 9, 183, 0.15);
+      }
+
+      .card.card-offset:hover {
+        transform: translateY(-24px);
+        box-shadow: 0 22px 40px rgba(114, 9, 183, 0.25);
+      }
+
+      .card-img-wrapper {
+        position: relative;
+        height: 270px;
+        overflow: hidden;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      }
+
+      .card-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .card:hover .card-img-wrapper img {
+        transform: scale(1.08);
+      }
+
+      .card-badge {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+        background: rgba(11, 19, 43, 0.85);
+        backdrop-filter: blur(8px);
+        color: var(--accent);
+        border: 1px solid rgba(255, 183, 3, 0.4);
+        padding: 0.35rem 0.9rem;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        z-index: 5;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 기본 D-Day 배지 */
+      .badge-dday {
+        position: absolute;
+        bottom: -14px;
+        left: 20px;
+        background: linear-gradient(135deg, #ffe100 0%, #de4465 100%);
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 0.85rem;
+        padding: 0.4rem 1.1rem;
+        border-radius: 50px;
+        box-shadow: 0 6px 18px rgba(255, 0, 127, 0.4);
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 2px solid #ffffff;
+        letter-spacing: 0.5px;
+        transition: transform 0.3s ease;
+      }
+
+      /* 🔥 어긋난 카드의 스티커형 기울어진 배지 */
+      .badge-dday.badge-tilted {
+        transform: rotate(-8deg);
+        background: linear-gradient(135deg, #b180d1 0%, #3a0ca3 100%);
+        box-shadow: 0 6px 18px rgba(114, 9, 183, 0.5);
+      }
+
+      .card:hover .badge-dday.badge-tilted {
+        transform: rotate(0deg) scale(1.08);
+      }
+
+      .card-body {
+        padding: 2.5rem 2rem 2rem;
+        background: #ffffff;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 0.6rem;
+        color: var(--secondary);
+      }
+
+      .card-desc {
+        color: var(--text-sub);
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        height: 48px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 1.2rem;
+        font-size: 0.88rem;
+        color: var(--text-sub);
+        font-weight: 500;
+      }
+
+      /* 5. 추천 여행 코스 */
+      .course-bg {
+        background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .course-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        position: relative;
+      }
+
+      .course-step {
+        background: #ffffff;
+        padding: 2rem 1.6rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        position: relative;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s;
+      }
+
+      .course-step:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-green);
+        box-shadow: 0 12px 25px rgba(16, 185, 129, 0.15);
+      }
+
+      .step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(
+          135deg,
+          var(--accent-green) 0%,
+          #059669 100%
+        );
+        color: white;
+        border-radius: 50%;
+        font-size: 0.9rem;
+        font-weight: 800;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+      }
+
+      .step-title {
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+        color: var(--secondary);
+      }
+
+      .step-desc {
+        font-size: 0.88rem;
+        color: var(--text-sub);
+        word-break: keep-all;
+      }
+
+      /* 6. 광주 8미 음식 그리드 */
+      .food-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .food-card {
+        background: var(--surface);
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      }
+
+      .food-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 12px 24px -5px rgba(245, 158, 11, 0.2);
+        background: #fffdfa;
+      }
+
+      .food-icon {
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        color: #d97706;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.2);
+      }
+
+      .food-info h4 {
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 2px;
+      }
+
+      .food-info p {
+        font-size: 0.82rem;
+        color: var(--text-sub);
+      }
+
+      /* 8. 방명록 */
+      .guestbook-bg {
+        background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+        border-top: 1px solid var(--border);
+      }
+
+      .guestbook-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* 방명록 입력 폼 컴포넌트 */
+      .gb-form {
+        background: var(--secondary);
+        border-radius: var(--radius-lg);
+        padding: 2.2rem;
+        position: sticky;
+        top: 100px;
+        box-shadow: 0 20px 40px rgba(11, 19, 43, 0.25);
+        overflow: hidden;
+      }
+
+      .gb-form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-pink) 0%,
+          var(--accent) 50%,
+          var(--accent-purple) 100%
+        );
+      }
+
+      .gb-form h3 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin-bottom: 0.4rem;
+      }
+
+      .gb-sub {
+        color: #94a3b8;
+        font-size: 0.88rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .gb-field {
+        margin-bottom: 1.1rem;
+      }
+
+      .gb-field label {
+        display: block;
+        color: #cbd5e1;
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.3px;
+      }
+
+      .gb-field input,
+      .gb-field textarea {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-family: inherit;
+        outline: none;
+        transition: all 0.2s;
+        resize: vertical;
+      }
+
+      .gb-field input::placeholder,
+      .gb-field textarea::placeholder {
+        color: #64748b;
+      }
+
+      .gb-field input:focus,
+      .gb-field textarea:focus {
+        border-color: var(--accent);
+        background: rgba(255, 183, 3, 0.08);
+        box-shadow: 0 0 0 3px rgba(255, 183, 3, 0.15);
+      }
+
+      .gb-field textarea {
+        min-height: 120px;
+      }
+
+      .gb-submit {
+        width: 100%;
+        background: linear-gradient(135deg, var(--accent) 0%, #f59e0b 100%);
+        color: var(--secondary);
+        border: none;
+        padding: 0.9rem;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.25s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+      }
+
+      .gb-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(245, 158, 11, 0.45);
+      }
+
+      .gb-submit:active {
+        transform: translateY(0);
+      }
+
+      /* 방명록 리스트 컴포넌트 */
+      .gb-list-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .gb-count {
+        font-size: 0.9rem;
+        color: var(--text-sub);
+        font-weight: 600;
+      }
+
+      .gb-count strong {
+        color: var(--accent-pink);
+        font-size: 1.1rem;
+      }
+
+      .gb-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .gb-empty {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: var(--text-sub);
+        background: #ffffff;
+        border: 1px dashed var(--border);
+        border-radius: var(--radius-md);
+      }
+
+      .gb-empty i {
+        font-size: 2.4rem;
+        color: var(--border);
+        margin-bottom: 0.8rem;
+        display: block;
+      }
+
+      .gb-item {
+        background: #ffffff;
+        border-radius: var(--radius-md);
+        padding: 1.4rem 1.6rem;
+        border: 1px solid var(--border);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        display: flex;
+        gap: 1.1rem;
+        animation: gbFadeIn 0.4s ease;
+        transition: all 0.25s;
+      }
+
+      .gb-item:hover {
+        border-color: rgba(255, 0, 127, 0.4);
+        box-shadow: 0 12px 26px rgba(255, 0, 127, 0.1);
+        transform: translateX(4px);
+      }
+
+      @keyframes gbFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .gb-avatar {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .gb-item-body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .gb-item-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .gb-name {
+        font-weight: 800;
+        color: var(--secondary);
+        font-size: 1.02rem;
+      }
+
+      .gb-time {
+        font-size: 0.78rem;
+        color: var(--text-sub);
+        white-space: nowrap;
+      }
+
+      .gb-message {
+        color: var(--text-main);
+        font-size: 0.94rem;
+        line-height: 1.6;
+        word-break: break-word;
+      }
+
+      /* 7. 푸터 */
+      footer {
+        background: var(--secondary);
+        color: #94a3b8;
+        padding: 5rem 2rem 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-pink) 0%,
+          var(--accent) 33%,
+          var(--primary) 66%,
+          var(--accent-green) 100%
+        );
+      }
+
+      .footer-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+      }
+
+      .footer-brand h2 {
+        color: #ffffff;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.6rem;
+      }
+
+      .footer-brand h2 span {
+        color: var(--accent);
+      }
+
+      .footer-brand p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: #94a3b8;
+      }
+
+      .footer-col h4 {
+        color: #ffffff;
+        font-size: 1.05rem;
+        margin-bottom: 1.4rem;
+        font-weight: 700;
+      }
+
+      .footer-col ul {
+        list-style: none;
+      }
+
+      .footer-col li {
+        margin-bottom: 0.7rem;
+      }
+
+      .footer-col a {
+        font-size: 0.9rem;
+        transition: color 0.2s;
+        color: #94a3b8;
+      }
+
+      .footer-col a:hover {
+        color: var(--accent);
+      }
+
+      .footer-bottom {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+
+      /* 반응형 미디어 쿼리 */
+      @media (max-width: 1024px) {
+        .cards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .course-timeline {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .food-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .guestbook-grid {
+          grid-template-columns: 1fr;
+        }
+        .gb-form {
+          position: static;
+        }
+        .footer-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 868px) {
+        .nav-menu {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+        .hero-search {
+          margin: 0 auto;
+        }
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+        .card.card-offset {
+          transform: translateY(0);
+        }
+        .card.card-offset:hover {
+          transform: translateY(-8px);
+        }
+        .course-timeline {
+          grid-template-columns: 1fr;
+        }
+        .stats-container {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1.5rem;
+        }
+        .footer-container {
+          grid-template-columns: 1fr;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-sun" style="color: var(--accent)"></i>
+          광주광역시
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">소개</a></li>
+          <li><a href="#spots" class="nav-link">명소</a></li>
+          <li><a href="#course" class="nav-link">추천코스</a></li>
+          <li><a href="#food" class="nav-link">광주8미</a></li>
+          <li><a href="#guestbook" class="nav-link">방명록</a></li>
+        </ul>
+        <a href="#contact" class="nav-btn">관광 가이드 신청</a>
+      </div>
+    </header>
+
+    <section class="hero" id="about">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1 style="color: #ffffff">
+            예술의 깊이,<br /><span style="color: var(--accent)">빛고을</span>의
+            따스함
+          </h1>
+          <p>
+            민주주의의 역사와 첨단 문화 예술이 공존하는 아름다운 도시,
+            광주광역시로 여러분을 초대합니다.
+          </p>
+          <div class="hero-search">
+            <input
+              type="text"
+              placeholder="어디로 떠나고 싶으신가요? (예: 무등산, ACC)"
+            />
+            <button type="button"><i class="fa-solid fa-magnifying-glass"></i> 검색</button>
+          </div>
+        </div>
+        <div
+          style="
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 2.2rem;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 1.5rem;
+            "
+          >
+            <div>
+              <span style="color: #94a3b8; font-size: 0.85rem">현재 날씨</span>
+              <h3 style="font-size: 1.8rem; margin-top: 4px; font-weight: 800">
+                24°C <small style="font-size: 1rem; color: #4ade80">맑음</small>
+              </h3>
+            </div>
+            <div style="text-align: right">
+              <span style="color: #94a3b8; font-size: 0.85rem"
+                >통합대기지수</span
+              >
+              <h3
+                style="
+                  font-size: 1.2rem;
+                  color: #60a5fa;
+                  margin-top: 8px;
+                  font-weight: 700;
+                "
+              >
+                <i
+                  class="fa-solid fa-leaf"
+                  style="color: var(--accent-green)"
+                ></i>
+                좋음 (22㎍/㎥)
+              </h3>
+            </div>
+          </div>
+          <hr
+            style="
+              border: none;
+              border-top: 1px solid rgba(255, 255, 255, 0.12);
+              margin-bottom: 1.5rem;
+            "
+          />
+          <p style="font-size: 0.95rem; color: #f8fafc">
+            <i
+              class="fa-solid fa-calendar-check"
+              style="color: var(--accent); margin-right: 6px"
+            ></i>
+            <strong>진행 중인 주요 행사</strong>
+          </p>
+          <p
+            style="
+              font-size: 0.9rem;
+              color: #cbd5e1;
+              margin-top: 6px;
+              font-weight: 500;
+            "
+          >
+            제15회 광주비엔날레 (국립아시아문화전당 일원)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-bar">
+      <div class="stats-container" data-aos="fade-up">
+        <div class="stat-item">
+          <h3>1,187m</h3>
+          <p>무등산 천왕봉 높이</p>
+        </div>
+        <div class="stat-item">
+          <h3>140만</h3>
+          <p>광주광역시 인구수</p>
+        </div>
+        <div class="stat-item">
+          <h3>8大</h3>
+          <p>전통의 미식, 광주 8미</p>
+        </div>
+        <div class="stat-item">
+          <h3>No.1</h3>
+          <p>아시아 최대 문화 복합공간</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="spots">
+      <div class="section-header">
+        <span class="section-tag">Must Visit</span>
+        <h2 class="section-title">광주 대표 여행지 TOP 4</h2>
+      </div>
+      <div class="cards-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="card-img-wrapper">
+            <span class="card-badge">자연 · 힐링</span>
+            <img
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80"
+              alt="무등산"
+            />
+          </div>
+          <div class="badge-dday">
+            <i class="fa-solid fa-fire"></i> 축제 D-3
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">무등산 국립공원</h3>
+            <p class="card-desc">
+              세계지질공원으로 인증된 주상절리대(서석대, 입석대)의 압도적인
+              장관을 만나보세요.
+            </p>
+            <div class="card-footer">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--accent-green); margin-right: 4px"
+                ></i>
+                동구 용연동</span
+              >
+              <span style="color: #d97706; font-weight: 800"
+                ><i class="fa-solid fa-star"></i> 4.9</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-offset">
+          <div class="card-img-wrapper">
+            <span class="card-badge">문화 · 예술</span>
+            <img
+              src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=80"
+              alt="ACC"
+            />
+          </div>
+          <div class="badge-dday badge-tilted">
+            <i class="fa-solid fa-clock"></i> 전시 D-3
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">국립아시아문화전당 (ACC)</h3>
+            <p class="card-desc">
+              아시아의 과거와 현재, 미래의 문화가 교차하는 세계적 수준의 도심 속
+              복합문화공간입니다.
+            </p>
+            <div class="card-footer">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--primary); margin-right: 4px"
+                ></i>
+                동구 문화전당로</span
+              >
+              <span style="color: #d97706; font-weight: 800"
+                ><i class="fa-solid fa-star"></i> 4.8</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <span class="card-badge">역사 · 골목</span>
+            <img
+              src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80"
+              alt="양림동"
+            />
+          </div>
+          <div class="badge-dday">
+            <i class="fa-solid fa-calendar-day"></i> 투어 D-3
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">양림동 역사문화마을</h3>
+            <p class="card-desc">
+              100년 전 근대 서양 가옥과 한옥, 펭귄마을이 어우러진 레트로 감성의
+              이색 골목길입니다.
+            </p>
+            <div class="card-footer">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--accent); margin-right: 4px"
+                ></i>
+                남구 양림동</span
+              >
+              <span style="color: #d97706; font-weight: 800"
+                ><i class="fa-solid fa-star"></i> 4.7</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-wrapper">
+            <span class="card-badge">민주 · 평화</span>
+            <img
+              src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80"
+              alt="5·18민주광장"
+            />
+          </div>
+          <div class="badge-dday">
+            <i class="fa-solid fa-flag"></i> 행사 D-3
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">5·18민주광장 & 옛 전남도청</h3>
+            <p class="card-desc">
+              한국 민주주의 역사의 상징적인 장소이자, 분수대와 다양한 광장
+              문화행사가 펼쳐지는 공간입니다.
+            </p>
+            <div class="card-footer">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot"
+                  style="color: var(--primary-dark); margin-right: 4px"
+                ></i>
+                동구 금남로</span
+              >
+              <span style="color: #d97706; font-weight: 800"
+                ><i class="fa-solid fa-star"></i> 4.9</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="course-bg">
+      <section class="section" id="course">
+        <div class="section-header">
+          <span
+            class="section-tag"
+            style="
+              color: var(--accent-green);
+              background: rgba(16, 185, 129, 0.1);
+            "
+            >Travel Course</span
+          >
+          <h2 class="section-title">추천 당일치기 감성 코스</h2>
+        </div>
+        <div class="course-timeline" data-aos="fade-up" data-aos-delay="100">
+          <div class="course-step">
+            <span class="step-num">1</span>
+            <h4 class="step-title">양림동 골목 산책</h4>
+            <p class="step-desc">근대 가옥 감상 및 펭귄마을 예술 골목 탐방</p>
+          </div>
+          <div class="course-step">
+            <span class="step-num">2</span>
+            <h4 class="step-title">점심: 송정 떡갈비</h4>
+            <p class="step-desc">명품 거리에서 즐기는 육즙 가득 전통 떡갈비</p>
+          </div>
+          <div class="course-step">
+            <span class="step-num">3</span>
+            <h4 class="step-title">ACC 전시 관람</h4>
+            <p class="step-desc">국립아시아문화전당의 최첨단 미디어아트 체험</p>
+          </div>
+          <div class="course-step">
+            <span class="step-num">4</span>
+            <h4 class="step-title">지산유원지 야경</h4>
+            <p class="step-desc">
+              리프트를 타고 올라가 바라보는 광주 도심 야경
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section" id="food">
+      <div class="section-header">
+        <span class="section-tag">Gwangju Gourmet</span>
+        <h2 class="section-title">놓칠 수 없는 광주 8미(味)</h2>
+      </div>
+      <div class="food-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="food-info">
+            <h4>광주 떡갈비</h4>
+            <p>부드럽고 숯불향이 가득한 전통 맛</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-bowl-food"></i></div>
+          <div class="food-info">
+            <h4>무등산 보리밥</h4>
+            <p>신선한 산채나물과 즐기는 신선함</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon">
+            <i class="fa-solid fa-hot-tub-person"></i>
+          </div>
+          <div class="food-info">
+            <h4>광주 오리탕</h4>
+            <p>미나리를 듬뿍 넣은 구수한 들깨 오리탕</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon">
+            <i class="fa-solid fa-drumstick-bite"></i>
+          </div>
+          <div class="food-info">
+            <h4>한우 육전</h4>
+            <p>즉석에서 고소하게 부쳐내는 맛</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+          <div class="food-info">
+            <h4>남도 한정식</h4>
+            <p>상다리가 부러질 듯한 푸짐한 차림</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-stroopwafel"></i></div>
+          <div class="food-info">
+            <h4>상추튀김</h4>
+            <p>바삭한 튀김을 상추와 양념장에 싸먹는 별미</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-jar"></i></div>
+          <div class="food-info">
+            <h4>광주 김치</h4>
+            <p>깊은 풍미와 젓갈이 어우러진 명품 김치</p>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-icon"><i class="fa-solid fa-fish"></i></div>
+          <div class="food-info">
+            <h4>계절 회 요리</h4>
+            <p>서해와 남해의 제철 신선한 수산물</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="guestbook-bg">
+      <section class="section" id="guestbook">
+        <div class="section-header">
+          <span
+            class="section-tag"
+            style="
+              color: var(--accent-purple);
+              background: rgba(114, 9, 183, 0.1);
+            "
+            >Guestbook</span
+          >
+          <h2 class="section-title">방명록 남기기</h2>
+        </div>
+        <div class="guestbook-grid" data-aos="fade-up" data-aos-delay="100">
+          <!-- 방명록 입력 폼 컴포넌트 -->
+          <form class="gb-form" id="gb-form" autocomplete="off">
+            <h3>
+              <i
+                class="fa-solid fa-pen-to-square"
+                style="color: var(--accent)"
+              ></i>
+              방문 인사 남기기
+            </h3>
+            <p class="gb-sub">빛고을 광주에 온 소감을 자유롭게 적어주세요.</p>
+            <div class="gb-field">
+              <label for="gb-name">작성자 이름</label>
+              <input
+                type="text"
+                id="gb-name"
+                name="author_name"
+                placeholder="이름 또는 닉네임"
+                maxlength="30"
+                required
+              />
+            </div>
+            <div class="gb-field">
+              <label for="gb-message">메시지</label>
+              <textarea
+                id="gb-message"
+                name="message"
+                placeholder="광주에서의 추억, 느낀 점을 남겨주세요."
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="gb-submit">
+              <i class="fa-solid fa-paper-plane"></i> 방명록 등록
+            </button>
+          </form>
+
+          <!-- 방명록 리스트 컴포넌트 -->
+          <div class="gb-list-wrap">
+            <div class="gb-list-header">
+              <span class="gb-count"
+                >총 <strong id="gb-count">0</strong>개의 방명록</span
+              >
+              <span style="font-size: 0.82rem; color: var(--text-sub)">
+                <i
+                  class="fa-solid fa-arrow-down-wide-short"
+                  style="color: var(--accent-green)"
+                ></i>
+                최신순
+              </span>
+            </div>
+            <div class="gb-list" id="gb-list">
+              <!-- 방명록 항목이 동적으로 렌더링 됩니다 -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="contact">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>광주광역시<span>.</span></h2>
+          <p>
+            빛고을 광주는 당신의 방문을 언제나 환영합니다.<br />역사와 문화,
+            자연이 공존하는 아름다운 도시에서 특별한 추억을 만들어보세요.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>주요 서비스</h4>
+          <ul>
+            <li><a href="#">문화관광포털</a></li>
+            <li><a href="#">시정소식</a></li>
+            <li><a href="#">광주 대중교통 안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>추천 여행</h4>
+          <ul>
+            <li><a href="#">무등산 등산코스</a></li>
+            <li><a href="#">양림동 근대역사투어</a></li>
+            <li><a href="#">광주 야경 명소</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>문의처</h4>
+          <ul>
+            <li><a href="#">빛고을 콜센터: 062-120</a></li>
+            <li><a href="#">관광안내소: 062-233-0868</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gwangju Metropolitan City. All rights reserved.</p>
+        <p>본 페이지는 광주광역시 홍보를 위한 맞춤형 웹사이트입니다.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var STORAGE_KEY = "gwangju_guestbook";
+        var AVATAR_COLORS = [
+          ["#ff007f", "#e11d48"],
+          ["#7209b7", "#3a0ca3"],
+          ["#0284c7", "#0369a1"],
+          ["#10b981", "#059669"],
+          ["#f59e0b", "#d97706"],
+          ["#6366f1", "#4338ca"],
+        ];
+
+        /* 저장소 계층: localStorage 로드/저장 */
+        function loadEntries() {
+          try {
+            return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+          } catch (e) {
+            return [];
+          }
+        }
+        function saveEntries(entries) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+        }
+
+        /* 유틸: XSS 방지용 이스케이프 */
+        function escapeHtml(str) {
+          var div = document.createElement("div");
+          div.textContent = str;
+          return div.innerHTML;
+        }
+
+        /* 유틸: 작성 시간 포맷 */
+        function formatTime(iso) {
+          var d = new Date(iso);
+          var pad = function (n) {
+            return String(n).padStart(2, "0");
+          };
+          return (
+            d.getFullYear() +
+            "-" +
+            pad(d.getMonth() + 1) +
+            "-" +
+            pad(d.getDate()) +
+            " " +
+            pad(d.getHours()) +
+            ":" +
+            pad(d.getMinutes())
+          );
+        }
+
+        /* 유틸: 이름 첫 글자로 아바타 + 색상 생성 */
+        function avatarFor(name, id) {
+          var initial = (name.trim()[0] || "?").toUpperCase();
+          var pair = AVATAR_COLORS[id % AVATAR_COLORS.length];
+          return {
+            initial: initial,
+            gradient:
+              "linear-gradient(135deg, " + pair[0] + ", " + pair[1] + ")",
+          };
+        }
+
+        /* 리스트 렌더 컴포넌트: 최신순 정렬 */
+        function renderList() {
+          var listEl = document.getElementById("gb-list");
+          var countEl = document.getElementById("gb-count");
+          var entries = loadEntries().sort(function (a, b) {
+            return new Date(b.created_at) - new Date(a.created_at);
+          });
+
+          countEl.textContent = entries.length;
+
+          if (entries.length === 0) {
+            listEl.innerHTML =
+              '<div class="gb-empty">' +
+              '<i class="fa-solid fa-feather"></i>' +
+              "<p>아직 작성된 방명록이 없어요.<br />첫 번째 방문 인사를 남겨주세요!</p>" +
+              "</div>";
+            return;
+          }
+
+          listEl.innerHTML = entries
+            .map(function (e) {
+              var av = avatarFor(e.author_name, e.id);
+              return (
+                '<article class="gb-item">' +
+                '<div class="gb-avatar" style="background:' +
+                av.gradient +
+                '">' +
+                escapeHtml(av.initial) +
+                "</div>" +
+                '<div class="gb-item-body">' +
+                '<div class="gb-item-head">' +
+                '<span class="gb-name">' +
+                escapeHtml(e.author_name) +
+                "</span>" +
+                '<span class="gb-time"><i class="fa-regular fa-clock"></i> ' +
+                formatTime(e.created_at) +
+                "</span>" +
+                "</div>" +
+                '<p class="gb-message">' +
+                escapeHtml(e.message) +
+                "</p>" +
+                "</div>" +
+                "</article>"
+              );
+            })
+            .join("");
+        }
+
+        /* 축포 효과: 사이트 컬러로 좌우 캐논 + 중앙 폭죽 */
+        function fireConfetti() {
+          if (typeof confetti !== "function") return;
+          var colors = [
+            "#ff007f",
+            "#ffb703",
+            "#7209b7",
+            "#10b981",
+            "#0284c7",
+            "#ffffff",
+          ];
+          var end = Date.now() + 900;
+
+          (function frame() {
+            confetti({
+              particleCount: 5,
+              angle: 60,
+              spread: 60,
+              startVelocity: 55,
+              origin: { x: 0, y: 0.75 },
+              colors: colors,
+            });
+            confetti({
+              particleCount: 5,
+              angle: 120,
+              spread: 60,
+              startVelocity: 55,
+              origin: { x: 1, y: 0.75 },
+              colors: colors,
+            });
+            if (Date.now() < end) requestAnimationFrame(frame);
+          })();
+
+          confetti({
+            particleCount: 140,
+            spread: 110,
+            startVelocity: 50,
+            origin: { x: 0.5, y: 0.6 },
+            colors: colors,
+          });
+        }
+
+        /* 폼 컴포넌트: 등록 처리 */
+        function handleSubmit(e) {
+          e.preventDefault();
+          var nameInput = document.getElementById("gb-name");
+          var msgInput = document.getElementById("gb-message");
+
+          var author_name = nameInput.value.trim();
+          var message = msgInput.value.trim();
+
+          if (!author_name || !message) return;
+
+          var entries = loadEntries();
+          var nextId = entries.length
+            ? Math.max.apply(
+                null,
+                entries.map(function (x) {
+                  return x.id;
+                }),
+              ) + 1
+            : 1;
+
+          entries.push({
+            id: nextId,
+            author_name: author_name,
+            message: message,
+            created_at: new Date().toISOString(),
+          });
+          saveEntries(entries);
+
+          nameInput.value = "";
+          msgInput.value = "";
+          renderList();
+          fireConfetti();
+          nameInput.focus();
+        }
+
+        /* 초기화 */
+        document.addEventListener("DOMContentLoaded", function () {
+          if (typeof AOS !== "undefined") {
+            AOS.init({
+              duration: 800,
+              once: true,
+              offset: 80,
+              easing: "ease-out-cubic",
+            });
+          }
+          document
+            .getElementById("gb-form")
+            .addEventListener("submit", handleSubmit);
+          renderList();
+        });
+      })();
+    </script>
+  </body>
+</html>
